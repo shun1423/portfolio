@@ -23,7 +23,7 @@
    
     <link rel="stylesheet" href="style.css" />
     <style>
- 
+      
       * {margin:0;padding:0;}
       .section input[id*="slide"] {display:none;}
       .section .slidewrap {max-width:1200px;margin:0 auto;}
@@ -56,9 +56,16 @@
       
    
       /* 좌,우 슬라이드 버튼 */
-      .slide-control > div {display:none;}
-      .section .left {left:10px;background:url('./imgs/left.png') center center / 50% no-repeat;}
-      .section .right {right:10px;background:url('./imgs/right.png') center center / 50% no-repeat;}
+    
+
+      .section .left {left:20px;background:url('./imgs/left.png') center center / 50% no-repeat;}
+      .section .right {right:20px;background:url('./imgs/right.png') center center / 50% no-repeat;}
+      @media screen and (max-width: 768px) {
+      .section .left {left:1px;background:url('./imgs/left.png') center center / 15% no-repeat;}
+      .section .right {right:1px;background:url('./imgs/right.png') center center / 15% no-repeat;}
+    }
+
+      
       .section input[id="slide01-1"]:checked ~ .slidewrap .slide-control > div:nth-child(1) {display:block;}
       .section input[id="slide01-2"]:checked ~ .slidewrap .slide-control > div:nth-child(2) {display:block;}
       .section input[id="slide01-3"]:checked ~ .slidewrap .slide-control > div:nth-child(3) {display:block;}
@@ -68,16 +75,14 @@
     
      /*2번째 슬라이드 좌,우 슬라이드 버튼 */
       .slide-control > div {display:none;}
-      .section .left {left:10px;background:url('./imgs/left.png') center center / 50% no-repeat;}
-      .section .right {right:10px;background:url('./imgs/right.png') center center / 50% no-repeat;}
+
       .section input[id="slide02-1"]:checked ~ .slidewrap .slide-control > div:nth-child(1) {display:block;}
       .section input[id="slide02-2"]:checked ~ .slidewrap .slide-control > div:nth-child(2) {display:block;}
       .section input[id="slide02-3"]:checked ~ .slidewrap .slide-control > div:nth-child(3) {display:block;}
       .section input[id="slide02-4"]:checked ~ .slidewrap .slide-control > div:nth-child(4) {display:block;}
       /*3번째 슬라이드 좌,우 슬라이드 버튼 */
       .slide-control > div {display:none;}
-      .section .left {left:10px;background:url('./imgs/left.png') center center / 50% no-repeat;}
-      .section .right {right:10px;background:url('./imgs/right.png') center center / 50% no-repeat;}
+  
       .section input[id="slide03-1"]:checked ~ .slidewrap .slide-control > div:nth-child(1) {display:block;}
       .section input[id="slide03-2"]:checked ~ .slidewrap .slide-control > div:nth-child(2) {display:block;}
     
@@ -359,9 +364,9 @@
             <li><label for="slide01-1"><i class="fa-solid fa-1"></i></label></li>
             <li><label for="slide01-2"><i class="fa-solid fa-2"></i></label></li>
             <li><label for="slide01-3"><i class="fa-solid fa-3"></i></label></li>
-            <li><label for="slide01-3"><i class="fa-solid fa-4"></i></label></li>
-            <li><label for="slide01-3"><i class="fa-solid fa-5"></i></label></li>
-            <li><label for="slide01-3"><i class="fa-solid fa-6"></i></label></li>
+            <li><label for="slide01-4"><i class="fa-solid fa-4"></i></label></li>
+            <li><label for="slide01-5"><i class="fa-solid fa-5"></i></label></li>
+            <li><label for="slide01-6"><i class="fa-solid fa-6"></i></label></li>
           </ul>
         </div>
       
@@ -374,7 +379,7 @@
             프론트엔드는 webpack을 이용하여 처리했습니다.<br>
             <br>
             배포는 Heroku, S3, Mongo Atlas 를 이용하여 배포했으며, 구현 기능으로는 
-            유저인증 및 가입과 로그인, 소셜 로그인(Github), <br>유저 프로필, 비디오 업로드, 및 비디오 플레이어 , Comment 등이 있습니다. 
+            유저인증 및 가입과 로그인, 소셜 로그인(Github), 유저 프로필, 비디오 업로드, 및 비디오 플레이어 , Comment 등이 있습니다. 
             비디오플레이어는 Vanilla JS를 이용해 마우스를 움직이면 재생바가 올라오도록
             구현했습니다.<br>
             <br>
